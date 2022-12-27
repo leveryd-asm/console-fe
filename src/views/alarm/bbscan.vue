@@ -31,8 +31,9 @@
             });
             // 请求服务端更新
             bbscan_multinodeal(ids)
-            this.$refs.cute_table.reset()
-            this.$message.success('批量操作成功！');
+            //this.$refs.cute_table.reset()
+            this.$message.success('批量操作成功！')
+            this.$refs.cute_table.my_query()
           })
           .catch(() => {
             this.$message.info('已取消操作!');
@@ -51,8 +52,9 @@
             });
             // 请求服务端更新
             bbscan_multideal(ids)
-            this.$refs.cute_table.reset()
-            this.$message.success('批量操作成功！');
+            this.$message.success('批量操作成功！')
+            //this.$refs.cute_table.reset()
+            this.$refs.cute_table.my_query()
           })
           .catch(() => {
             this.$message.info('已取消操作!');

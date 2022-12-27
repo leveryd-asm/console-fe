@@ -106,6 +106,24 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: '/workflow',
+    redirect: '/workflow/manage',
+    component: Layout,
+    name: 'Workflow',
+    meta: {
+      title: '工作流管理',
+      icon: 'example'
+    },
+    children: [
+      {
+        name: 'workflow',
+        path: 'manage',
+        component: () => import('@/views/dashboard/workflow'),
+        meta: { title: '工作流管理', icon: 'tree' }
+      }
+    ]
+  },
   { path: '*', redirect: '/404', hidden: true }
 ]
 

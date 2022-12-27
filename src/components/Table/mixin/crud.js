@@ -54,7 +54,7 @@ export default {
       this.get()
     },
     delete_api_endpoint() {
-      return this.url + "/" + this.module_name + "/delete"
+      return this.url + "/" + this.module_name + "/deleteByIds"
     },
     // 删除单条记录
     deleteOneRow(row) {
@@ -62,7 +62,7 @@ export default {
         .then(() => {
           // 向请求服务端删除
           let resource = this.$resource(this.delete_api_endpoint());
-          resource.save({id: row.id})
+          resource.save({ids: [row.id]})
             .then((response) => {
               this.$message.success('成功删除!');
               this.get();

@@ -1,5 +1,5 @@
 <template>
-  <cute_table :batch_delete_by_query_options_flag=true :isFl=false :create_flag=false :export_xls_flag=false :module_name="module_name" :columns="columns" ref="cute_table">
+  <cute_table :batch_delete_by_query_options_flag=true :isFl=false :export_xls_flag=false :module_name="module_name" :columns="columns" ref="cute_table">
     <template slot-scope="scope" slot="custom_multi_operation">
       <el-button type="primary" @click="multi_brute_subdomain(scope.selected)" :disabled="scope.selected.length==0">批量获取子域名
       </el-button>
@@ -62,21 +62,8 @@
             'search': true
           },
           {
-            'name': 'taskstartdate',
-            'label': '任务启动时间',
-          },
-          {
             'name': 'uploaddate',
-            'label': '任务上传时间',
-          },
-          {
-            'name': 'owner',
-            'label': '扫描发起人',
-          },
-          {
-            'name': 'taskid',
-            'label': '任务id',
-            'search': true
+            'label': '上传时间',
           },
           {
             'name': 'origin',

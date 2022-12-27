@@ -46,5 +46,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: leveryd/console-fe:2022.12.23
+        tags: leveryd/console-fe:2022.12.27
         file: docker/Dockerfile
