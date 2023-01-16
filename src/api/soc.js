@@ -12,6 +12,28 @@ export function bbscan_multinodeal(idlist) {
   })
 }
 
+export function multinodeal(idlist, module) {
+  return request({
+    url: module + '/multiupdate',
+    method: 'post',
+    data: {
+      id: idlist,
+      status: '无须处理'
+    }
+  })
+}
+
+export function multideal(idlist, module) {
+  return request({
+    url: module + '/multiupdate',
+    method: 'post',
+    data: {
+      id: idlist,
+      status: '已处理'
+    }
+  })
+}
+
 export function bbscan_multideal(idlist) {
   return request({
     url: '/alarm/bbscan/multiupdate',

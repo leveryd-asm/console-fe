@@ -237,7 +237,8 @@ export default {
       'val': '',
       'type': 'input',
       'search': false,
-      'sortable': 'custom'
+      'sortable': 'custom',
+      'view': true,
     }
 
     let select_default_value = {

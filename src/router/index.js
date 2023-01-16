@@ -103,6 +103,12 @@ export const constantRouterMap = [
         name: 'alarm',
         component: () => import('@/views/alarm/bbscan'),
         meta: { title: '漏洞报警', icon: 'tree' }
+      },
+      {
+        path: 'ms',
+        name: 'ms',
+        component: () => import('@/views/alarm/ms'),
+        meta: { title: '管理后台', icon: 'tree' }
       }
     ]
   },

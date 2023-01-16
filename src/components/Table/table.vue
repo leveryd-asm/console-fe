@@ -42,7 +42,7 @@
               </el-table-column>
               <template v-for="col in columns">
                 <el-table-column :sortable="col.sortable" :label="col.label" :width="col.width" :prop="col.name"
-                                 :fixed="col.fixed">
+                                 :fixed="col.fixed" v-if="col.view">
                   <template slot-scope="scope">
                     <slot v-bind:row="scope.row" v-bind:col="col" name="custom_template"
                           v-if="col['custom_template']"></slot>
