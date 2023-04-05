@@ -57,15 +57,12 @@
                   <slot v-bind:row="scope.row" name="custom_operation">
 
                   </slot>
-                  <div v-if="scope.row.enable || typeof(scope.row.enable) === 'undefined'">
+                  <div>
                     <el-button @click="$refs.update.setCurrent(scope.row)" type="text" size="small" v-if="update_flag">
                       修改
                     </el-button>
                     <el-button @click="deleteOneRow(scope.row)" type="text" size="small" v-if="delete_flag">删除
                     </el-button>
-                  </div>
-                  <div v-else>
-                    已删除
                   </div>
                 </template>
               </el-table-column>

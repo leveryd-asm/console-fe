@@ -36,28 +36,6 @@ export const constantRouterMap = [
       component: () => import('@/views/dashboard/index')
     }]
   },
-
-  {
-    path: '/assets',
-    component: Layout,
-    redirect: '/assets/fingerprint',
-    name: 'Assets',
-    meta: { title: '资产信息', icon: 'example' },
-    children: [
-      {
-        path: 'corp',
-        name: 'corp',
-        component: () => import('@/views/assets/corp'),
-        meta: { title: '厂商信息', icon: 'tree' }
-      },
-      {
-        path: 'whitelist',
-        name: 'whitelist',
-        component: () => import('@/views/assets/whitelist'),
-        meta: { title: '白名单', icon: 'tree' }
-      }
-    ]
-  },
   {
     path: '/info',
     component: Layout,
@@ -76,18 +54,6 @@ export const constantRouterMap = [
         name: 'Subdomain',
         component: () => import('@/views/info/subdomain'),
         meta: { title: '子域名', icon: 'table' }
-      },
-      {
-        path: 'hostserviceinfo',
-        name: 'Hostserviceinfo',
-        component: () => import('@/views/info/hostserviceinfo'),
-        meta: { title: '主机服务', icon: 'table' }
-      },
-      {
-        path: 'mail',
-        name: 'Mail',
-        component: () => import('@/views/info/mail'),
-        meta: { title: '邮箱', icon: 'table' }
       }
     ]
   },
